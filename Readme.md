@@ -10,6 +10,9 @@
 <!-- default file list end -->
 
 # Diagram for Web Forms - Node and Edge data sources - How to bind the control to in-memory data sources
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/229963825/)**
+<!-- run online end -->
 
 Unlike declarative *DataSource controls (such as AccessDataSource, SqlDataSource, LinqDataSource, EntityDataSource, and so on), custom in-memory data sources (such as List\<T>, DataTable and so on) do not allow you to automatically perform CRUD operations. These custom CRUD operations' logic can be implemented with the help of ObjectDataSource.
 This example demonstrates how to bind the Diagram control to ObjectDataSource and implement custom CRUD operations at the data source level. In this example, the Diagram control loads a graph structure from two data sources: one for shapes ([NodeDataSourceID](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxDiagram.ASPxDiagram.NodeDataSourceID)) and the other for shape connectors ([EdgeDataSourceID](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxDiagram.ASPxDiagram.EdgeDataSourceID)). You need to add mapping information for a shape [Key](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxDiagram.DiagramMappingInfo.Key) and a connector [Key](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxDiagram.DiagramMappingInfo.Key), [FromKey](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxDiagram.DiagramEdgeMappingInfo.FromKey) and [ToKey](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxDiagram.DiagramEdgeMappingInfo.ToKey) properties.
