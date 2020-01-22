@@ -37,14 +37,14 @@ namespace DiagramTwoDataSources
                     data = new List<Node>
                 {
                     new Node(1, (int)DiagramShapeType.Terminator, "A new ticket", 96, 48),
-                    new Node(2, (int)DiagramShapeType.Process, "Analyze\nthe issue", 168, 72),
-                    new Node(3, (int)DiagramShapeType.Diamond, "Do we have all\ninformation to\nwork with?", 168, 96),
-                    new Node(4, (int)DiagramShapeType.Terminator, "Answered\n", 96, 48),
-                    new Node(5, (int)DiagramShapeType.Rectangle, "Request additional\ninformation or clarify\nthe scenario", 144, 72),
-                    new Node(6, (int)DiagramShapeType.Rectangle, "Prepare an example in\nCode Central", 168, 72),
-                    new Node(7, (int)DiagramShapeType.Rectangle, "Update the\ndocumentation", 168, 72),
-                    new Node(8, (int)DiagramShapeType.Rectangle, "Process the\nticket", 168, 72),
-                    new Node(9, (int)DiagramShapeType.Rectangle, "Work with the\nR&D team", 144, 72)
+                    new Node(2, (int)DiagramShapeType.Process, "Analyze the issue", 168, 72),
+                    new Node(3, (int)DiagramShapeType.Diamond, "Do we have all information to work with?", 168, 96),
+                    new Node(4, (int)DiagramShapeType.Terminator, "Answered", 96, 48),
+                    new Node(5, (int)DiagramShapeType.Rectangle, "Request additional information or clarify the scenario", 144, 72),
+                    new Node(6, (int)DiagramShapeType.Rectangle, "Prepare an example in Code Central", 168, 72),
+                    new Node(7, (int)DiagramShapeType.Rectangle, "Update the documentation", 168, 72),
+                    new Node(8, (int)DiagramShapeType.Rectangle, "Process the ticket", 168, 72),
+                    new Node(9, (int)DiagramShapeType.Rectangle, "Work with the R&D team", 144, 72)
                 };
                     HttpContext.Current.Session["DiagramNodes"] = data;
                 }
