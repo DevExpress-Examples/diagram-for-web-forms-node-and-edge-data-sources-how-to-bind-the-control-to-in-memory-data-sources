@@ -30,14 +30,14 @@ Namespace DiagramTwoDataSources
 				If data Is Nothing Then
 					data = New List(Of Node) From {
 						New Node(1, CInt(DiagramShapeType.Terminator), "A new ticket", 96, 48),
-						New Node(2, CInt(DiagramShapeType.Process), "Analyze" & vbLf & "the issue", 168, 72),
-						New Node(3, CInt(DiagramShapeType.Diamond), "Do we have all" & vbLf & "information to" & vbLf & "work with?", 168, 96),
-						New Node(4, CInt(DiagramShapeType.Terminator), "Answered" & vbLf, 96, 48),
-						New Node(5, CInt(DiagramShapeType.Rectangle), "Request additional" & vbLf & "information or clarify" & vbLf & "the scenario", 144, 72),
-						New Node(6, CInt(DiagramShapeType.Rectangle), "Prepare an example in" & vbLf & "Code Central", 168, 72),
-						New Node(7, CInt(DiagramShapeType.Rectangle), "Update the" & vbLf & "documentation", 168, 72),
-						New Node(8, CInt(DiagramShapeType.Rectangle), "Process the" & vbLf & "ticket", 168, 72),
-						New Node(9, CInt(DiagramShapeType.Rectangle), "Work with the" & vbLf & "R&D team", 144, 72)
+						New Node(2, CInt(DiagramShapeType.Process), "Analyze the issue", 168, 72),
+						New Node(3, CInt(DiagramShapeType.Diamond), "Do we have all information to work with?", 168, 96),
+						New Node(4, CInt(DiagramShapeType.Terminator), "Answered", 96, 48),
+						New Node(5, CInt(DiagramShapeType.Rectangle), "Request additional information or clarify the scenario", 144, 72),
+						New Node(6, CInt(DiagramShapeType.Rectangle), "Prepare an example in Code Central", 168, 72),
+						New Node(7, CInt(DiagramShapeType.Rectangle), "Update the documentation", 168, 72),
+						New Node(8, CInt(DiagramShapeType.Rectangle), "Process the ticket", 168, 72),
+						New Node(9, CInt(DiagramShapeType.Rectangle), "Work with the R&D team", 144, 72)
 					}
 					HttpContext.Current.Session("DiagramNodes") = data
 				End If
