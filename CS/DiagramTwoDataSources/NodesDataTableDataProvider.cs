@@ -29,14 +29,14 @@ namespace DiagramTwoDataSources
                     dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["ID"] };
 
                     dataTable.Rows.Add(1, (int)DiagramShapeType.Terminator, "A new ticket", 96, 48);
-                    dataTable.Rows.Add(2, (int)DiagramShapeType.Process, "Analyze\nthe issue", 168, 72);
-                    dataTable.Rows.Add(3, (int)DiagramShapeType.Diamond, "Do we have all\ninformation to\nwork with?", 168, 96);
-                    dataTable.Rows.Add(4, (int)DiagramShapeType.Terminator, "Answered\n", 96, 48);
-                    dataTable.Rows.Add(5, (int)DiagramShapeType.Rectangle, "Request additional\ninformation or clarify\nthe scenario", 144, 72);
-                    dataTable.Rows.Add(6, (int)DiagramShapeType.Rectangle, "Prepare an example in\nCode Central", 168, 72);
-                    dataTable.Rows.Add(7, (int)DiagramShapeType.Rectangle, "Update the\ndocumentation", 168, 72);
-                    dataTable.Rows.Add(8, (int)DiagramShapeType.Rectangle, "Process the\nticket", 168, 72);
-                    dataTable.Rows.Add(9, (int)DiagramShapeType.Rectangle, "Work with the\nR&D team", 144, 72);
+                    dataTable.Rows.Add(2, (int)DiagramShapeType.Process, "Analyze the issue", 168, 72);
+                    dataTable.Rows.Add(3, (int)DiagramShapeType.Diamond, "Do we have all information to work with?", 168, 96);
+                    dataTable.Rows.Add(4, (int)DiagramShapeType.Terminator, "Answered", 96, 48);
+                    dataTable.Rows.Add(5, (int)DiagramShapeType.Rectangle, "Request additional information or clarify the scenario", 144, 72);
+                    dataTable.Rows.Add(6, (int)DiagramShapeType.Rectangle, "Prepare an example in Code Central", 168, 72);
+                    dataTable.Rows.Add(7, (int)DiagramShapeType.Rectangle, "Update the documentation", 168, 72);
+                    dataTable.Rows.Add(8, (int)DiagramShapeType.Rectangle, "Process the ticket", 168, 72);
+                    dataTable.Rows.Add(9, (int)DiagramShapeType.Rectangle, "Work with the R&D team", 144, 72);
                 
                     HttpContext.Current.Session["DiagramDataTableNodes"] = dataTable;
                 }
