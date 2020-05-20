@@ -13,7 +13,7 @@
             NodeDataSourceID="NodeDataSource" EdgeDataSourceID="EdgeDataSource" Units="Px">
             <SettingsAutoLayout Type="Layered" Orientation="Vertical" />
             <Mappings>
-                <Node Key="ID" Type="Type" Width="Width" Height="Height" />
+                <Node Key="ID" Type="Type" Width="Width" Height="Height" Style="Style" TextStyle="TextStyle" />
                 <Edge Key="ID" FromKey="FromID" ToKey="ToID" Text="Text" />
             </Mappings>
         </dx:ASPxDiagram>

@@ -9,18 +9,22 @@ namespace DiagramTwoDataSources
     public class Node
     {
         public int ID { set; get; }
-        public int Type { set; get; }
+        public string Type { set; get; }
         public string Text { set; get; }
         public int Width { set; get; }
         public int Height { set; get; }
+        public string Style { set; get; }
+        public string TextStyle { set; get; }
 
-        public Node(int id, int type, string text, int width, int height)
+        public Node(int id, string type, string text, int width, int height, string style = null, string textStyle = null)
         {
             ID = id;
             Type = type;
             Text = text;
             Width = width;
             Height = height;
+            Style = style;
+            TextStyle = textStyle;
         }
 
         public Node() { }
@@ -36,15 +40,15 @@ namespace DiagramTwoDataSources
                 {
                     data = new List<Node>
                 {
-                    new Node(1, (int)DiagramShapeType.Terminator, "A new ticket", 96, 48),
-                    new Node(2, (int)DiagramShapeType.Process, "Analyze the issue", 168, 72),
-                    new Node(3, (int)DiagramShapeType.Diamond, "Do we have all information to work with?", 168, 96),
-                    new Node(4, (int)DiagramShapeType.Terminator, "Answered", 96, 48),
-                    new Node(5, (int)DiagramShapeType.Rectangle, "Request additional information or clarify the scenario", 144, 72),
-                    new Node(6, (int)DiagramShapeType.Rectangle, "Prepare an example in Code Central", 168, 72),
-                    new Node(7, (int)DiagramShapeType.Rectangle, "Update the documentation", 168, 72),
-                    new Node(8, (int)DiagramShapeType.Rectangle, "Process the ticket", 168, 72),
-                    new Node(9, (int)DiagramShapeType.Rectangle, "Work with the R&D team", 144, 72)
+                    new Node(1, DiagramShapeType.Terminator.ToString(), "A new ticket", 96, 48),
+                    new Node(2, DiagramShapeType.Process.ToString(), "Analyze the issue", 168, 72),
+                    new Node(3, DiagramShapeType.Diamond.ToString(), "Do we have all \ninformation \nto work with?", 168, 96, "stroke: red"),
+                    new Node(4, DiagramShapeType.Terminator.ToString(), "Answered", 96, 48, textStyle:"fill: darkgreen; font-weight: bold"),
+                    new Node(5, DiagramShapeType.Rectangle.ToString(), "Request additional information or clarify the scenario", 144, 72),
+                    new Node(6, DiagramShapeType.Rectangle.ToString(), "Prepare an example in Code Central", 168, 72),
+                    new Node(7, DiagramShapeType.Rectangle.ToString(), "Update the documentation", 168, 72),
+                    new Node(8, DiagramShapeType.Rectangle.ToString(), "Process the ticket", 168, 72),
+                    new Node(9, DiagramShapeType.Rectangle.ToString(), "Work with the R&D team", 144, 72)
                 };
                     HttpContext.Current.Session["DiagramNodes"] = data;
                 }
@@ -76,6 +80,8 @@ namespace DiagramTwoDataSources
             nodeToUpdate.Text = node.Text;
             nodeToUpdate.Width = node.Width;
             nodeToUpdate.Height = node.Height;
+            nodeToUpdate.Style = node.Style;
+            nodeToUpdate.TextStyle = node.TextStyle;
         }
 
         [DataObjectMethod(DataObjectMethodType.Delete, true)]

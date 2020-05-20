@@ -7,17 +7,21 @@ Imports System.Web
 Namespace DiagramTwoDataSources
 	Public Class Node
 		Public Property ID() As Integer
-		Public Property Type() As Integer
+		Public Property Type() As String
 		Public Property Text() As String
 		Public Property Width() As Integer
 		Public Property Height() As Integer
+		Public Property Style() As String
+		Public Property TextStyle() As String
 
-		Public Sub New(ByVal id As Integer, ByVal type As Integer, ByVal text As String, ByVal width As Integer, ByVal height As Integer)
+		Public Sub New(ByVal id As Integer, ByVal type As String, ByVal text As String, ByVal width As Integer, ByVal height As Integer, Optional ByVal style As String = Nothing, Optional ByVal textStyle As String = Nothing)
 			Me.ID = id
 			Me.Type = type
 			Me.Text = text
 			Me.Width = width
 			Me.Height = height
+			Me.Style = style
+			Me.TextStyle = textStyle
 		End Sub
 
 		Public Sub New()
@@ -29,15 +33,15 @@ Namespace DiagramTwoDataSources
 				Dim data = TryCast(HttpContext.Current.Session("DiagramNodes"), List(Of Node))
 				If data Is Nothing Then
 					data = New List(Of Node) From {
-						New Node(1, CInt(DiagramShapeType.Terminator), "A new ticket", 96, 48),
-						New Node(2, CInt(DiagramShapeType.Process), "Analyze the issue", 168, 72),
-						New Node(3, CInt(DiagramShapeType.Diamond), "Do we have all information to work with?", 168, 96),
-						New Node(4, CInt(DiagramShapeType.Terminator), "Answered", 96, 48),
-						New Node(5, CInt(DiagramShapeType.Rectangle), "Request additional information or clarify the scenario", 144, 72),
-						New Node(6, CInt(DiagramShapeType.Rectangle), "Prepare an example in Code Central", 168, 72),
-						New Node(7, CInt(DiagramShapeType.Rectangle), "Update the documentation", 168, 72),
-						New Node(8, CInt(DiagramShapeType.Rectangle), "Process the ticket", 168, 72),
-						New Node(9, CInt(DiagramShapeType.Rectangle), "Work with the R&D team", 144, 72)
+						New Node(1, DiagramShapeType.Terminator.ToString(), "A new ticket", 96, 48),
+						New Node(2, DiagramShapeType.Process.ToString(), "Analyze the issue", 168, 72),
+						New Node(3, DiagramShapeType.Diamond.ToString(), "Do we have all" + vbCrLf + "information" + vbCrLf + "to work with?", 168, 96, "stroke: red"),
+						New Node(4, DiagramShapeType.Terminator.ToString(), "Answered", 96, 48, textStyle:="fill: darkgreen; font-weight: bold"),
+						New Node(5, DiagramShapeType.Rectangle.ToString(), "Request additional information or clarify the scenario", 144, 72),
+						New Node(6, DiagramShapeType.Rectangle.ToString(), "Prepare an example in Code Central", 168, 72),
+						New Node(7, DiagramShapeType.Rectangle.ToString(), "Update the documentation", 168, 72),
+						New Node(8, DiagramShapeType.Rectangle.ToString(), "Process the ticket", 168, 72),
+						New Node(9, DiagramShapeType.Rectangle.ToString(), "Work with the R&D team", 144, 72)
 					}
 					HttpContext.Current.Session("DiagramNodes") = data
 				End If
