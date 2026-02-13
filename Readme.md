@@ -25,7 +25,7 @@ In this example, the Diagram control loads a graph structure from two data sourc
 [Diagram for Web Forms - Tree from Linear Data Structure - How to bind the control to in-memory data sources](https://github.com/DevExpress-Examples/diagram-for-web-forms-linear-data-structure-how-to-bind-the-control-to-in-memory-data-sources)  
 [Diagram for Web Forms - How to bind containers to an in-memory data source](https://github.com/DevExpress-Examples/diagram-for-web-forms-how-to-bind-containers-to-an-in-memory-data-source)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=diagram-for-web-forms-node-and-edge-data-sources-how-to-bind-the-control-to-in-memory-data-sources&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=diagram-for-web-forms-node-and-edge-data-sources-how-to-bind-the-control-to-in-memory-data-sources&~~~was_helpful=no)
 
